@@ -1,0 +1,13 @@
+$(window).scroll(function(){
+	var st = $(this).scrollTop();
+
+	if( $(window).height()+500 > $('header').height() ){
+
+		 $("header .col-md-12").css({
+		 	  "transform" : "translate3d(0px, " + st / 18 + "%, 0px)",
+		 	  "-webkit-transform" : "translate3d(0px, " + st / 18 + "%, 0px)",
+		 	  "opacity" : "1" - st / 700
+		 });
+
+	}
+});
